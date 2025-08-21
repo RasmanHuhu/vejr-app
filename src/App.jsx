@@ -1,33 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useState } from 'react';
+import HabitDay from './day.jsx';
+import HabitStats from './stats.jsx';
+import HabitHistory from './history.jsx';
+import './style.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [view, setView] = useState('day');
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <nav>
+        <button onClick={() => setView('day')}>Dagens vaner</button>
+        <button onClick={() => setView('history')}>Historik</button>
+        <button onClick={() => setView('stats')}>Statistik</button>
+      </nav>
+      {view === 'day' && <HabitDay />}
+      {view === 'history' && <HabitHistory />}
+      {view === 'stats' && <HabitStats />}
+    </div>
+  );
 }
 
-export default App
+export default App;

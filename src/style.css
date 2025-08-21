@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  color: #333;
+  margin: 0;
+}
+
+nav {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px #ddd;
+}
+
+h2 {
+  color: #234;
+}
+button {
+  background: #68b3e2;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+label {
+  display: block;
+  margin: 8px 0;
+}
